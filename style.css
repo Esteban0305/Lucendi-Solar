@@ -1,0 +1,157 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+html{
+	scroll-behavior: smooth;
+}
+header{
+	display: flex;
+	background-color:#336bff;
+	padding: 12px;
+	color: #ffffff;
+	padding-left: calc(50% - 540px);
+	align-items: center;
+}
+header img{
+	height: 60px;
+	width: 60px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	padding: 6px;
+	margin-right: 12px;
+	object-fit: contain;
+}
+
+nav{
+	display: flex;
+	padding: 6px;
+	background-color: #F4D35E;
+	padding-right: calc(50% - 540px);
+	color: #2A2D34;
+}
+nav li:first-child{
+	margin-left: auto;
+}
+nav li{
+	list-style: none;
+	margin-right: 10px;
+	transition: .3s ease;
+}
+nav li hr{
+	width: 0px;
+	visibility: hidden;
+	margin-left: 50%;
+	transition: .1s ease;
+	border-style: solid;
+	border-width: .5px;
+	border-color: #2A2D34;
+}
+nav li:hover hr{
+	transition: .3s ease;
+	margin: 0;
+	width: 100%;
+	visibility: visible;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+body > div{
+	margin-left: calc(50% - 540px);
+	margin-right: calc(50% - 540px);
+}
+
+.slideshow{
+	width: 1080px;
+	height: 378px;
+	display: flex;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	animation: slider 10s ease infinite;
+	position: relative;
+}
+.slideshow .slide{
+	background-color: #ffffff;
+	box-shadow: 0px 3px 6px #54545470;
+	width: 100%;
+	min-width: 1080px;
+	border-radius: 	5px;
+	margin-top: 12px;
+	margin-right: 1080px;
+	position: absolute;
+}
+.slideshowPagination{
+	display: flex;
+	margin-top: 12px;
+}
+.slideshowPagination li.dot{
+	list-style: none;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: #545454;
+	margin-right: 5px;
+	transition: .1s ease;
+	cursor: pointer;
+}
+.slideshowPagination li.dot:hover{
+	background-color: #336bff;
+	transition: .2s ease;
+}
+
+h2.productsTitle{
+	margin-top: 12px;
+	padding: 12px;
+	background-color: #F4D35E;
+	color: #2A2D34;
+	padding-left: calc(50% - 540px);
+	padding-right: calc(50% - 540px);
+}
+
+.productos{
+	margin-top: 12px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.productos .marca{
+	min-height: 150px;
+	padding: 12px;
+	transition: .1s ease;
+}
+.productos .marca:hover{
+	box-shadow: 0px 0px 6px #54545470;
+	transition: .3s ease;
+}
+
+.contactanos{
+	margin-top: 12px;
+	display: flex;
+	margin-bottom: 24px;
+}
+form{
+	margin: auto;
+	margin-top: 12px;
+	width: 50%;
+	min-width: 400px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12px;
+}
+input, textarea{
+	padding: 12px;
+	border: solid 1px #2A2D3470;
+	border-radius: 5px;
+	outline: none;
+}
+footer{
+	color: #ffffff;
+	background-color: #2A2D34;
+	padding: 24px;
+	padding-left: calc(50% - 540px);
+	padding-right: calc(50% - 540px);
+}
