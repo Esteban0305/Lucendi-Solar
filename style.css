@@ -67,18 +67,17 @@ body > div{
 
 .slideshow{
 	width: 1080px;
-	height: 378px;
 	display: flex;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	animation: slider 10s ease infinite;
 	position: relative;
+	aspect-ratio: 3 / 1;
 }
 .slideshow .slide{
 	background-color: #ffffff;
 	box-shadow: 0px 3px 6px #54545470;
 	width: 100%;
-	min-width: 1080px;
 	border-radius: 	5px;
 	margin-top: 12px;
 	margin-right: 1080px;
@@ -87,20 +86,6 @@ body > div{
 .slideshowPagination{
 	display: flex;
 	margin-top: 12px;
-}
-.slideshowPagination li.dot{
-	list-style: none;
-	height: 10px;
-	width: 10px;
-	border-radius: 50%;
-	background-color: #545454;
-	margin-right: 5px;
-	transition: .1s ease;
-	cursor: pointer;
-}
-.slideshowPagination li.dot:hover{
-	background-color: #336bff;
-	transition: .2s ease;
 }
 
 h2.productsTitle{
@@ -123,6 +108,7 @@ h2.productsTitle{
 	transition: .1s ease;
 	position: relative;
 	border-radius: 5px;
+	padding-left: calc(50% - 176px);
 }
 .productos .marca:hover{
 	box-shadow: 0px 0px 6px #54545470;
@@ -131,16 +117,18 @@ h2.productsTitle{
 .productos .marca p{
 	display: none;
 	text-align: justify;
-	margin: 12px;
 	margin-top: 10px;
+	width: 352px;
+	padding-bottom: 12px;
 }
 .productos .marca span{
 	opacity: 0;
 	transition: .1s ease;
 	position: absolute;
 	top: 114px;
-	right: 12px;
+	right: calc(50% - 164px);
 	cursor: pointer;
+	color: #fff;
 }
 .productos .marca img{
 	height: 150px;
@@ -217,4 +205,33 @@ footer a{
 footer a span{
 	margin-right: 12px;
 	font-size: 36px;
+}
+@media (max-width: 1105px){
+	header{
+		width: 100%;
+		padding: 12px;
+	}
+	body > div{
+		margin: 0;
+		padding: 12px;
+	}
+	.slideshow{
+		width: 100%;
+		margin: 0px;
+		aspect-ratio: 3 / 1;
+	}
+	.slideshow .slide{
+		margin: 0;
+	}
+	.productos{
+		margin: 0;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 740px){
+	.productos{
+		margin: 0;
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
